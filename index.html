@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HÜSEYİN BARIŞ | Cybersecurity & Software</title>
+    <title>HÜSEYİN BARIŞ - Cybersecurity & Software Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -26,7 +26,7 @@
             position: relative;
         }
 
-        /* Matrix Canvas Canvas BG */
+        /* Matrix Canvas BG */
         #matrix-canvas {
             position: fixed;
             top: 0;
@@ -59,10 +59,11 @@
             font-weight: 700;
             color: var(--neon-green);
             text-shadow: var(--neon-shadow);
+            letter-spacing: 1px;
         }
 
-        nav ul { list-style: none; display: flex; gap: 25px; }
-        nav a { font-size: 0.95rem; font-weight: 600; }
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav a { font-size: 0.9rem; font-weight: 600; }
         nav a:hover { color: var(--neon-green); text-shadow: var(--neon-shadow); }
 
         /* Hero Main Section */
@@ -77,18 +78,18 @@
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 3.8rem;
             font-weight: 700;
             color: var(--neon-green);
             text-shadow: 0 0 25px rgba(0, 255, 102, 0.8);
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             letter-spacing: -1px;
         }
 
-        .hero p {
+        .hero .subtitle {
             font-size: 1.2rem;
             color: #9ca3af;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             margin-bottom: 30px;
             font-family: 'Space Mono', monospace;
         }
@@ -124,7 +125,7 @@
 
         .terminal-body {
             padding: 20px;
-            height: 220px;
+            height: 200px;
             overflow-y: auto;
             color: #00ff66;
             font-size: 0.9rem;
@@ -188,6 +189,19 @@
         .card p { color: #9ca3af; font-size: 0.9rem; margin-bottom: 15px; }
         .card .meta { font-size: 0.8rem; color: #6b7280; font-family: 'Space Mono', monospace; }
 
+        .tag {
+            display: inline-block;
+            padding: 3px 8px;
+            background: rgba(0, 255, 102, 0.1);
+            color: var(--neon-green);
+            border: 1px solid var(--neon-green);
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-right: 5px;
+            margin-top: 5px;
+            font-family: 'Space Mono', monospace;
+        }
+
         /* Skills Progress Bars */
         .skill-item { margin-bottom: 20px; }
         .skill-info { display: flex; justify-content: space-between; font-family: 'Space Mono', monospace; margin-bottom: 5px; }
@@ -232,6 +246,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             font-family: 'Space Mono', monospace;
+            text-align: center;
         }
 
         .btn-neon:hover {
@@ -259,9 +274,10 @@
         <nav>
             <ul>
                 <li><a href="#home">Anasayfa</a></li>
+                <li><a href="#projects">Projeler</a></li>
                 <li><a href="#skills">Yetenekler</a></li>
                 <li><a href="#certs">Sertifikalar</a></li>
-                <li><a href="#projects">Projeler</a></li>
+                <li><a href="#writeups">Raporlar</a></li>
                 <li><a href="#contact">İletişim</a></li>
             </ul>
         </nav>
@@ -269,7 +285,7 @@
 
     <div class="hero" id="home">
         <h1>HÜSEYİN BARIŞ</h1>
-        <p>SİBER GÜVENLİK & YAZILIM UZMANI</p>
+        <p class="subtitle">SİBER GÜVENLİK & YAZILIM UZMANI</p>
 
         <!-- Terminal Widget -->
         <div class="terminal-container">
@@ -277,19 +293,53 @@
                 <div class="dot dot-red"></div>
                 <div class="dot dot-yellow"></div>
                 <div class="dot dot-green"></div>
-                <span class="terminal-title">bash - hsynnbrs@security-box:~</span>
+                <span class="terminal-title">bash - huseyinbaris@security-lab:~</span>
             </div>
             <div class="terminal-body" id="terminal-output">
-                <div>Hoş geldin! Komut listesini görmek için <b style="color:#fff;">'help'</b> yazıp Enter'a bas.</div>
+                <div>[+] Hüseyin Barış OS v2.4 Başlatıldı.</div>
+                <div>Sistem hazır. Komut listesi için <b style="color:#fff;">'help'</b> veya <b style="color:#fff;">'info'</b> yazın.</div>
             </div>
             <div style="padding: 0 20px 15px 20px;">
                 <div class="terminal-input-line">
-                    <span class="terminal-prompt">hsynnbrs@sec:~$</span>
+                    <span class="terminal-prompt">huseyin@sec:~$</span>
                     <input type="text" id="terminal-input" class="terminal-input" autofocus autocomplete="off">
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Projeler Bölümü -->
+    <section id="projects">
+        <h2>// Projelerim</h2>
+        <div class="grid-container">
+            <div class="card">
+                <div>
+                    <div class="issuer">YAPAY ZEKA</div>
+                    <h3>AI Chatbot Engine</h3>
+                    <p>Dify mimarisi ile eğitilmiş, Netlify üzerinde yayınlanan siber güvenlik odaklı özel yapay zeka asistanı.</p>
+                    <div><span class="tag">AI</span><span class="tag">Dify</span><span class="tag">Netlify</span><span class="tag">LLM</span></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="issuer">SİBER GÜVENLİK</div>
+                    <h3>Python Security Suite</h3>
+                    <p>Otomatik ağ tarama, zafiyet tespiti ve şifreleme araçları içeren Python kütüphanesi.</p>
+                    <div><span class="tag">Python</span><span class="tag">Sockets</span><span class="tag">Scapy</span></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="issuer">YAZILIM GELİŞTİRME</div>
+                    <h3>VOVA Social Concept</h3>
+                    <p>Flet ve Python altyapısı kullanılarak geliştirilmiş modern mobil sosyal uygulama konsepti.</p>
+                    <div><span class="tag">Flet</span><span class="tag">Python</span><span class="tag">UI/UX</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Skills Section -->
     <section id="skills">
@@ -388,17 +438,28 @@
         </div>
     </section>
 
-    <!-- Projeler Bölümü -->
-    <section id="projects">
-        <h2>// Öne Çıkan Projeler</h2>
+    <!-- Write-Ups & Siber Raporlar -->
+    <section id="writeups">
+        <h2>// Write-Ups & Raporlar</h2>
         <div class="grid-container">
             <div class="card">
-                <h3>Python Security Suite</h3>
-                <p>Otomatik ağ tarama, zafiyet tespiti ve şifreleme araçları içeren Python kütüphanesi.</p>
+                <div>
+                    <div class="issuer">CTF WRITE-UP</div>
+                    <h3>TryHackMe - RootMe Machine Analysis</h3>
+                    <p>Web zafiyeti tespiti (FileUpload Bypass), SUID hak yükseltme ve yetki elde etme adımları.</p>
+                    <span class="tag">Web Sec</span><span class="tag">PrivEsc</span><span class="tag">Linux</span>
+                </div>
+                <a href="#contact" class="btn-neon" style="margin-top:15px; padding:8px;">Rapor Talep Et</a>
             </div>
+
             <div class="card">
-                <h3>VOVA Social Concept</h3>
-                <p>Flet ve Python altyapısı kullanılarak geliştirilmiş modern mobil sosyal uygulama konsepti.</p>
+                <div>
+                    <div class="issuer">INCIDENT RESPONSE</div>
+                    <h3>Web Loglarında SQL Injection Tespiti</h3>
+                    <p>Apache web sunucu logları üzerinden gerçekleşen SQLi saldırı adımlarının SIEM üzerinde analizi.</p>
+                    <span class="tag">SIEM</span><span class="tag">Log Analysis</span><span class="tag">IR</span>
+                </div>
+                <a href="#contact" class="btn-neon" style="margin-top:15px; padding:8px;">Rapor Talep Et</a>
             </div>
         </div>
     </section>
@@ -406,7 +467,7 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2>// İletişime Geç</h2>
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Mesajınız simüle edildi ve gönderildi!');">
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Mesajınız Hüseyin Barış sistemine aktarıldı!');">
             <div class="form-group">
                 <label>İsim / Ad Soyad</label>
                 <input type="text" placeholder="Adınızı girin" required>
@@ -417,7 +478,7 @@
             </div>
             <div class="form-group">
                 <label>Mesajınız</label>
-                <textarea rows="5" placeholder="Mesajınızı buraya yazın..." required></textarea>
+                <textarea rows="5" placeholder="Hüseyin Barış'a mesajınızı yazın..." required></textarea>
             </div>
             <button type="submit" class="btn-neon">Mesajı Gönder</button>
         </form>
@@ -425,10 +486,10 @@
 
     <footer>
         <p>&copy; 2026 Hüseyin Barış. Tüm Hakları Saklıdır.</p>
-        <p style="margin-top: 8px; color: var(--neon-green); font-family: 'Space Mono', monospace;">Cybersecurity & Software Specialist</p>
+        <p style="margin-top: 8px; color: var(--neon-green); font-family: 'Space Mono', monospace;">Cybersecurity & Software Engineering</p>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Matrix & Terminal Scripts -->
     <script>
         // Matrix Background Effect
         const canvas = document.getElementById('matrix-canvas');
@@ -468,23 +529,25 @@
                 let response = '';
 
                 if (cmd === 'help') {
-                    response = 'Kullanılabilir komutlar: <b style="color:#fff;">certs</b>, <b style="color:#fff;">skills</b>, <b style="color:#fff;">projects</b>, <b style="color:#fff;">clear</b>';
+                    response = 'Kullanılabilir komutlar: <b style="color:#fff;">info</b>, <b style="color:#fff;">certs</b>, <b style="color:#fff;">skills</b>, <b style="color:#fff;">projects</b>, <b style="color:#fff;">clear</b>';
+                } else if (cmd === 'info') {
+                    response = 'Hüseyin Barış - Siber Güvenlik ve Yazılım Uzmanı.';
                 } else if (cmd === 'certs') {
                     response = 'Sertifikalar: IBM Cybersecurity, Cisco Intro, BTK Python, BTK SIEM...';
                 } else if (cmd === 'skills') {
                     response = 'Yetenekler: Python, Network Security, Linux, Log Analysis, Web Security';
                 } else if (cmd === 'projects') {
-                    response = 'Projeler: Python Security Suite, VOVA Social App';
+                    response = 'Projeler: AI Chatbot, Python Security Suite, VOVA App';
                 } else if (cmd === 'clear') {
                     output.innerHTML = '';
                     input.value = '';
                     return;
                 } else if (cmd !== '') {
-                    response = `Komut bulunamadı: '${cmd}'. Yardım için 'help' yazın.`;
+                    response = `Komut bulunamadı: '${cmd}'. 'help' veya 'info' deneyin.`;
                 }
 
                 if (cmd !== '') {
-                    output.innerHTML += `<div><span style="color:#00ff66;">hsynnbrs@sec:~$</span> ${input.value}</div>`;
+                    output.innerHTML += `<div><span style="color:#00ff66;">huseyin@sec:~$</span> ${input.value}</div>`;
                     output.innerHTML += `<div style="color:#9ca3af; margin-bottom:8px;">${response}</div>`;
                 }
                 input.value = '';
@@ -493,4 +556,4 @@
         });
     </script>
 </body>
-</html>    
+</html>
